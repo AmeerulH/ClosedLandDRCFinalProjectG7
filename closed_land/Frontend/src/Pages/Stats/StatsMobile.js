@@ -5,15 +5,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const StatsMobile = () => {
-  // let array = Object.entries(props).sort((b, a) => {
-  //   if (a.stats.one_day_change > b.stats.one_day_change) return 1;
-  //   if (a.stats.one_day_change < b.stats.one_day_change) return -1;
-  //   return 0;
-  // });
-
-  // console.log(props);
-  // let collectionsStats = array[0][1];
-
   let defCol = {
     ImgUrl:
       "https://lh3.googleusercontent.com/5KIxEGmnAiL5psnMCSLPlfSxDxfRSk4sTQRSyhPdgnu70nGb2YsuVxTmO2iKEkOZOfq476Bl1hAu6aJIKjs1myY=s130",

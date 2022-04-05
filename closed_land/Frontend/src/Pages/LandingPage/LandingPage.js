@@ -40,29 +40,8 @@ const LandingPage = () => {
     }, 10000);
   }, []);
 
-  // if (isLoading) {
-  //   return (
-  //     <Typical
-  //       steps={steps}
-  //       loop={1}
-  //       wrapper="h1"
-  //       className="loading"
-  //       // onClick={setLoading(true)}
-  //     />
-  //   );
-  // }
-
   return (
     <div>
-      {/* <div className="loading">
-        <video loop muted autoPlay controls="">
-          <source
-            src="https://www.youtube.com/watch?v=iutQJzAXiWo"
-            type="video/mp4"
-          />
-         
-        </video>
-      </div> */}
       <div
         className="loading"
         onClick={() => setHide(true)}
@@ -77,8 +56,6 @@ const LandingPage = () => {
       {hide === true ? (
         <div className="landpage">
           <Ethcall />
-          {/* <Navbar toggle={toggleSidebar} /> */}
-          {/* <Sidebar isOpen={isOpen} toggle={toggleSidebar} /> */}
           <Home />
           {/* <Numbers /> */}
           <Table collections={collections} />

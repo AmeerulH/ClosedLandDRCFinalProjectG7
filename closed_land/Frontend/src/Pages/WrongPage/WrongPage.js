@@ -18,11 +18,7 @@ const WrongPage = () => {
       >
         Page Doesn't Exist.
       </h1>
-      {/* <img
-        src={loadingImg}
-      /> */}
       <CarLoader></CarLoader>
-      <div className="wrongPageCube">{/* <LogoCube2></LogoCube2> */}</div>
     </div>
   );
 };

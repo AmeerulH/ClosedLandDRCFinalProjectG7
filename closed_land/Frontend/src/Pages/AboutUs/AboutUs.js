@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import Navbar from "../../Components/Navbar";
-// import Sidebar from "../../Components/Sidebar";
 import Ethcall from "../../Components/CombNav/Ethcall";
 import VisionMission from "./VisionMission";
 import "./AboutUs.css";
@@ -18,8 +16,6 @@ const AboutUs = () => {
 
   return (
     <div className="mainaboutus">
-      {/* <Navbar toggle={toggleSidebar} />
-      <Sidebar isOpen={isOpen} toggle={toggleSidebar} /> */}
       <Ethcall />
       <VisionMission />
       {/* <AccStats /> */}

@@ -23,11 +23,9 @@ const News = () => {
             objNews["news_title"] = element.title;
             objNews["news_url"] = element.url;
             arrNews.push(objNews);
-            // return arrNews;
           } else {
             return 0;
           }
-          // element.tags.includes("NFT") ? console.log(res.data.Data.tags) : null;
         });
 
         setNewsData(arrNews);

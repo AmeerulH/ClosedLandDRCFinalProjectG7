@@ -77,28 +77,6 @@ const Table = ({ props }) => {
     },
   };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     slugs.forEach((element) => {
-  //       axios
-  //         .get(`https://api.opensea.io/api/v1/collection/${element}`, options)
-  //         .then((res) => {
-  //           assets.push(res.data);
-  //         });
-  //     });
-  //     dataAssets = Object.entries(assets).sort((a, b) => {
-  //       if (a > b) return 1;
-  //       if (a < b) return -1;
-  //       return 0;
-  //     });
-  //     setCols(dataAssets);
-  //   }, 1000);
-  //   console.log(cols);
-  // }, []);
-
-  // console.log(cols[0]);
-  // console.log(testData);
-
   return (
     <div className="table" id="Table">
       <Col data-aos="fade-in" data-aos-once="true" className="stats gx-0">

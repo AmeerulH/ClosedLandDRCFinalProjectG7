@@ -24,15 +24,6 @@ const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [alert, setAlert] = useState(false);
   const [alertWrong, setAlertWrong] = useState(false);
-  // const user = useContext(UserContext);
-
-  // useEffect(() => {
-  //   const loggedInUser = localStorage.getItem("user");
-  //   if (loggedInUser) {
-  //     const foundUser = JSON.parse(loggedInUser);
-  //     setUser(foundUser);
-  //   }
-  // }, []);
 
   var ws = new WebSocket("wss://ws.binaryws.com/websockets/v3?app_id=1089");
 
@@ -80,17 +71,6 @@ const SignUp = () => {
     ws.close();
   }
 
-  function handleEnterSubmit(event) {
-    if (event.keyCode === 13) {
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        setIsLoading(true);
-        sendEmail();
-      } else {
-        console.log("lol");
-      }
-    }
-  }
-
   function verifyEmail() {
     setIsLoading(true);
     ws.onopen = function (evt) {
@@ -124,12 +104,6 @@ const SignUp = () => {
       }
     };
   }
-  const renderTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Go to your 'Manage Your Account Settings' in Deriv website or click the
-      link below to create your api token!
-    </Tooltip>
-  );
 
   return (
     <div>
@@ -273,22 +247,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-
-{
-  /* <div className="form-username1">
-                        <p className='usernames'>USERNAME</p>
-                        <input type="text" placeholder="Enter your username" />
-                       </div>
-                        <div className="form-email1">
-                          <div className='email'>EMAIL</div>
-                          <input type="email" placeholder="Enter your email" />
-                        </div>
-                        <div className="form-pass1">
-                          <div className='password'>PASSWORD</div>
-                          <input type="password" placeholder="Enter your password" />
-                        </div>
-                        <div className="form-pass2">
-                          <div className='password2'>RE-ENTER YOUR PASSWORD</div>
-                          <input type="password" placeholder="Re-enter your password" />
-                        </div> */
-}

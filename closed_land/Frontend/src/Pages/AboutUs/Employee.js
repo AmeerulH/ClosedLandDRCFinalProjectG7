@@ -1,10 +1,4 @@
 import React from "react";
-import ameerul from "../../images/ameerul.png";
-import suisin from "../../images/suisin.png";
-import amira from "../../images/amira.png";
-import raja from "../../images/raja.png";
-import luqman from "../../images/luqman.png";
-import raven from "../../images/raven.png";
 import { Col, Row } from "react-bootstrap";
 
 function Employee() {
