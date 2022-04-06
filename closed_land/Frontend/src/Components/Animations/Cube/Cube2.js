@@ -36,7 +36,6 @@ const LogoCube2 = () => {
         options
       )
       .then((res) => {
-        console.log(res.data);
         return res.data;
       });
   };
@@ -52,8 +51,6 @@ const LogoCube2 = () => {
       setAssets(dataAssets[0][1]);
     });
   }, []);
-
-  console.log(assets);
 
   return (
     <div className="cubeComponent2">

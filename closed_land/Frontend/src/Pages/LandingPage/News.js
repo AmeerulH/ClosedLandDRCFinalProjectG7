@@ -35,10 +35,6 @@ const News = () => {
       });
   }, []);
 
-  React.useEffect(() => {
-    console.log(newsData);
-  }, [newsData]);
-
   return (
     <div className="news">
       <Row className="px-0">
