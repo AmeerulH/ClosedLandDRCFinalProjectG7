@@ -50,7 +50,7 @@ const News = () => {
         <Carousel>
           {newsData.map((element, index) => {
             return (
-              <Carousel.Item>
+              <Carousel.Item key={index}>
                 <a href={element["news_url"]} target="_blank" rel="noreferrer">
                   <img
                     key={index}

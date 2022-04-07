@@ -26,8 +26,6 @@ function App() {
       const foundUser = JSON.parse(loggedInUser);
       setUser(foundUser);
     }
-
-    console.log(user);
   });
 
   useEffect(() => {
@@ -36,12 +34,7 @@ function App() {
       const foundUser = JSON.parse(loggedInUser);
       setUser(foundUser);
     }
-    console.log(user);
   }, []);
-
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
 
   return (
     <UserContext.Provider value={user}>

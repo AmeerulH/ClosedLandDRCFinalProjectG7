@@ -1,25 +1,25 @@
 .emailFooter > .input-group > .form-control {
   background-color: black !important;
-  color: #f8af04 !important;
-  border-color: #f8af04 !important;
+  color: #FE6047 !important;
+  border-color: #FE6047 !important;
 }
 
 .emailFooter > .input-group > .form-control > .form-email{
   background-color: transparent;
-  color: #f8af04;
+  color: #FE6047;
   border-color: transparent;
 }
 
 .emailFooter > .input-group > .form-control > .form-email:active {
   background-color: transparent;
-  color: #f8af04;
+  color: #FE6047;
   border-color: transparent;
 }
 
 #formFooter {
   background-color: black !important;
-  color: #f8af04 !important;
-  border-color: #f8af04 !important;
+  color: #FE6047 !important;
+  border-color: #FE6047 !important;
 }
 
 .emailFooter > .input-group > .form-control > .form-email:focus {
@@ -27,10 +27,10 @@
 }
 
 .emailFooter > .input-group > #button-addon2 {
-  background-color: #f8af04;
-  border-color: #f8af04 !important;
+  background-color: #FE6047;
+  border-color: #FE6047 !important;
   color: black;
-  font-family: Sora;
+  font-family: Raleway;
   font-weight: 700;
 }
 
@@ -39,8 +39,8 @@
 }
 
 .emailFooter > .input-group > #button-addon2:hover {
-  background-color: #f5455c !important;
-  color: #fff;
+  background-color: white !important;
+  color: black;
 }
 
 .emailFooter {
@@ -60,7 +60,7 @@
 
 #footerH1Email {
   color: #fff;
-  font-family: Sora;
+  font-family: Raleway;
   font-weight: 700;
   font-size: calc(10px + 2vmin) !important;
   text-align: center;
@@ -103,16 +103,16 @@
   padding: 0.5rem;
   /* background-color: #fff; */
   border-radius: 10px;
-  color: #f8af04;
+  color: #FE6047;
   background-color: black;
-  border: 0.5px solid #f8af04;
+  border: 0.5px solid #FE6047;
   margin: 0 0.5rem 0 0.5rem;
 }
 
 .footerIcons:hover {
   transform: scale(1.5);
-  color: #ff677c;
-  border-color: #ff677c;
+  color: white;
+  border-color: white;
   transition: all 0.2s ease-in-out;
 }
 
@@ -120,7 +120,7 @@
   text-align: center;
   color: #fff;
   font-size: calc(10px + 2vmin) !important;
-  font-family: Sora;
+  font-family: Raleway;
   font-weight: 600;
 }
 
@@ -388,7 +388,7 @@
   color: #fff !important;
   text-align: center;
   font-size: 1.5rem;
-  font-family: Sora;
+  font-family: Raleway;
   font-weight: 600;
   /* padding: 15px; */
 }

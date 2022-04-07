@@ -2,12 +2,11 @@ import "./Cube.css";
 import Cube from "react-3d-cube";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import { Container, Row, Col, Button } from "react-bootstrap";
+import CarLoader from "../CarLoading/CarLoader";
 
 const LogoCube = () => {
   const [col, setCol] = useState([]);
   const [assets, setAssets] = useState([]);
-  const [info, setInfo] = useState([]);
   let temp = [];
 
   let altAssets = [
@@ -38,8 +37,12 @@ const LogoCube = () => {
   ];
 
   useEffect(() => {
+    let rand = Math.floor(Math.random() * 100 + 10);
+
     axios
-      .get("https://api-mainnet.magiceden.dev/v2/collections?offset=5&limit=1")
+      .get(
+        `https://api-mainnet.magiceden.dev/v2/collections?offset=${rand}&limit=1`
+      )
       .then((res) => {
         axios
           .get(
@@ -52,24 +55,29 @@ const LogoCube = () => {
   }, []);
 
   useEffect(() => {
-    col.forEach((data) => {
-      axios
-        .get(`https://api-mainnet.magiceden.dev/v2/tokens/${data.tokenMint}`)
-        .then((res) => {
-          temp.push(res.data);
-        });
-    });
-    setInfo(temp);
+    console.log(col);
+    for (let i = 0; i < 6; i++) {
+      if (col[i] !== undefined) {
+        axios
+          .get(
+            `https://api-mainnet.magiceden.dev/v2/tokens/${col[i].tokenMint}`
+          )
+          .then((res) => {
+            temp.push(res.data);
+            if (temp.length === 6) {
+              setAssets(temp);
+            }
+          });
+      } else {
+        console.log("undefined");
+      }
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [col]);
 
   useEffect(() => {
-    if (info <= 6) {
-      setAssets(altAssets);
-    } else {
-      setAssets(info);
-    }
-  }, [info]);
+    console.log(assets);
+  }, [assets]);
 
   return (
     <div className="cubeComponent">
@@ -98,7 +106,11 @@ const LogoCube = () => {
               );
             })}
           </Cube>
-        ) : null}
+        ) : (
+          <div className="cubeCarCenter">
+            <CarLoader />
+          </div>
+        )}
       </div>
     </div>
   );

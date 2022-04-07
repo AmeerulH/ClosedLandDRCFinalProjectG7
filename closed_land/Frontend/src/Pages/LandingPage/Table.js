@@ -16,8 +16,9 @@ import { FaEthereum } from "react-icons/fa";
 const Table = ({ props }) => {
   const [data, setData] = useState([
     {
-      Name: "",
-      ImgUrl: "",
+      Name: "No Name",
+      ImgUrl:
+        "https://lh3.googleusercontent.com/BdxvLseXcfl57BiuQcQYdJ64v-aI8din7WPk0Pgo3qQFhAUH-B6i-dCqqc_mCkRIzULmwzwecnohLhrcH8A9mpWIZqA7ygc52Sr81hE=s120",
       StatsFloorPrice: 0,
       StatsOneDayChg: 0,
       StatsSevenDayChg: 0,
@@ -139,22 +140,22 @@ const Table = ({ props }) => {
                       ? {
                           color:
                             parseFloat(col.StatsOneDayChg) > 0
-                              ? "#A1FFB1"
-                              : "#7A0229",
+                              ? "#1BC000"
+                              : "#C00000",
                         }
                       : toggleText === "Last 7 Days"
                       ? {
                           color:
                             parseFloat(col.StatsSevenDayChg) > 0
-                              ? "#A1FFB1"
-                              : "#7A0229",
+                              ? "#1BC000"
+                              : "#C00000",
                         }
                       : toggleText === "Last 30 Days"
                       ? {
                           color:
                             parseFloat(col.StatsThirtyDayChange) > 0
-                              ? "#A1FFB1"
-                              : "#7A0229",
+                              ? "#1BC000"
+                              : "#C00000",
                         }
                       : {}
                   }

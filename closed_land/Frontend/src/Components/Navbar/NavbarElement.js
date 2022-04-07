@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { Button } from "react-bootstrap";
 
 export const Nav = styled.nav`
-  background: #0b0c10;
+  background: #121212;
   height: auto;
   width: 100%;
   display: grid;
@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   z-index: 2000;
   position: fixed;
   top: 0;
-  font-family: "Work Sans";
+  font-family: "Raleway";
   font-weight: 500;
 `;
 
@@ -105,7 +105,7 @@ export const NavPageLocation = styled.span`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: rgb(255, 78, 152) !important;
+    color: #fe6047 !important;
   }
 
   @media screen and (max-width: 1300px) {
@@ -135,12 +135,12 @@ export const NavLink = styled(Link)`
   cursor: pointer;
 
   &:active {
-    color: rgb(255, 78, 152) !important;
+    color: #fe6047 !important;
   }
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: rgb(255, 78, 152) !important;
+    color: #fe6047 !important;
     transform: scale(1.2) !important;
   }
 
@@ -483,14 +483,14 @@ export const NavHome = styled.h1`
   font-size: 25px;
   font-weight: bold;
   padding-top: 10px;
-  color: #f8c101;
+  color: white;
 
   &:hover {
-    color: rgb(255, 78, 152) !important;
+    color: #fe6047 !important;
   }
 
   &:active {
-    color: rgb(255, 78, 152) !important;
+    color: #fe6047 !important;
   }
 
   @media screen and (max-width: 1240px) {
@@ -580,6 +580,6 @@ export const ProfileIcon = styled(CgProfile)`
   color: #f8c101 !important;
 
   &:hover {
-    color: rgb(255, 78, 152) !important;
+    color: #fe6047 !important;
   }
 `;
