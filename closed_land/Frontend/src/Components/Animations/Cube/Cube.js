@@ -55,7 +55,6 @@ const LogoCube = () => {
   }, []);
 
   useEffect(() => {
-    console.log(col);
     for (let i = 0; i < 6; i++) {
       if (col[i] !== undefined) {
         axios
@@ -68,16 +67,10 @@ const LogoCube = () => {
               setAssets(temp);
             }
           });
-      } else {
-        console.log("undefined");
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [col]);
-
-  useEffect(() => {
-    console.log(assets);
-  }, [assets]);
 
   return (
     <div className="cubeComponent">
